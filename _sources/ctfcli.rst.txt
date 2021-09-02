@@ -1,16 +1,16 @@
 ctfcli package
 ==============
 
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   ctfcli.utils
+
 Submodules
 ----------
-
-ctfcli.ctfcli module
---------------------
-
-.. automodule:: ctfcli.ctfcli
-   :members:
-   :undoc-members:
-   :show-inheritance:
 
 ctfcli.linkage module
 ---------------------
