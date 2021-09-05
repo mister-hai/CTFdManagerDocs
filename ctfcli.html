@@ -40,18 +40,13 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="ctfcli.utils.html">ctfcli.utils package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="ctfcli.utils.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ctfcli.utils.html#ctfcli-utils-yaml-module">ctfcli.utils.Yaml module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ctfcli.utils.html#ctfcli-utils-apifunctions-module">ctfcli.utils.apifunctions module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ctfcli.utils.html#ctfcli-utils-apisession-module">ctfcli.utils.apisession module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ctfcli.utils.html#ctfcli-utils-auth-module">ctfcli.utils.auth module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ctfcli.utils.html#ctfcli-utils-challenge-module">ctfcli.utils.challenge module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ctfcli.utils.html#ctfcli-utils-checks-module">ctfcli.utils.checks module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ctfcli.utils.html#ctfcli-utils-ctfdrepo-module">ctfcli.utils.ctfdrepo module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ctfcli.utils.html#ctfcli-utils-gitrepo-module">ctfcli.utils.gitrepo module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ctfcli.utils.html#ctfcli-utils-models-module">ctfcli.utils.models module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ctfcli.utils.html#ctfcli-utils-securityutils-module">ctfcli.utils.securityutils module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ctfcli.utils.html#ctfcli-utils-utils-module">ctfcli.utils.utils module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ctfcli.utils.html#module-contents">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ctfcli.utils.html#module-ctfcli.utils.apifunctions">ctfcli.utils.apifunctions module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ctfcli.utils.html#module-ctfcli.utils.apisession">ctfcli.utils.apisession module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ctfcli.utils.html#module-ctfcli.utils.ctfdrepo">ctfcli.utils.ctfdrepo module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ctfcli.utils.html#module-ctfcli.utils.gitrepo">ctfcli.utils.gitrepo module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ctfcli.utils.html#module-ctfcli.utils.models">ctfcli.utils.models module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ctfcli.utils.html#module-ctfcli.utils.utils">ctfcli.utils.utils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ctfcli.utils.html#module-ctfcli.utils">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -60,14 +55,367 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="ctfcli-linkage-module">
-<h2>ctfcli.linkage module<a class="headerlink" href="#ctfcli-linkage-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-ctfcli.ClassConstructor">
+<span id="ctfcli-classconstructor-module"></span><h2>ctfcli.ClassConstructor module<a class="headerlink" href="#module-ctfcli.ClassConstructor" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="ctfcli.ClassConstructor.Category">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ctfcli.ClassConstructor.</span></span><span class="sig-name descname"><span class="pre">Category</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">location</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctfcli.ClassConstructor.Category" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>use getattr(),setattr() to add/query Challenge Entries
+this is used for keeping track internally</p>
+<dl>
+<dt>ChallengeCategory:</dt><dd><blockquote>
+<div><p>represents a folder in the PROJECTDIRECTORY/data/CTFd/challenges/ dir</p>
+</div></blockquote>
+<dl class="simple">
+<dt>ChallengeEntry:</dt><dd><p>represents a challenge.yaml
+name: thing</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="ctfcli.ClassConstructor.Category.listchallenges">
+<span class="sig-name descname"><span class="pre">listchallenges</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ctfcli.ClassConstructor.Category.listchallenges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists all the challenges appended to this category</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ctfcli.ClassConstructor.Challengeyaml">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ctfcli.ClassConstructor.</span></span><span class="sig-name descname"><span class="pre">Challengeyaml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">yamlfile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">handout</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solution</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctfcli.ClassConstructor.Challengeyaml" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ctfcli.ClassConstructor.Yaml" title="ctfcli.ClassConstructor.Yaml"><code class="xref py py-class docutils literal notranslate"><span class="pre">ctfcli.ClassConstructor.Yaml</span></code></a></p>
+<p>Base Class for all the attributes required on both the CTFd side and Repository side
+Represents the challenge.yml as exists in the folder for that specific challenge</p>
+<dl class="simple">
+<dt>Represents a Challenge Folder</dt><dd><p>If the folder contents are not to specification
+The program will throw an error and refuse to process that folder</p>
+</dd>
+<dt>Contents of a Challenge Folder:</dt><dd><p>handouts: File or Folder
+solution: File or Folder
+challenge.yaml</p>
+</dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">filepath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s2">&quot;challenge.yaml&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">newchallenge</span> <span class="o">=</span> <span class="n">Challengeyaml</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This Class is where the data from the challenge.yaml ends up
+For modifications to CTFd itself; Additional fields use these
+for arguments in the challenge.yaml
+Optional:
+&gt;&gt;&gt; kwargs.get()
+Required Arguments:
+&gt;&gt;&gt; kwargs.pop()</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>yamlfile</strong> (<em>Path</em>) – filepath of challenge.yaml</p></li>
+<li><p><strong>handout</strong> (<em>Path</em>) – </p></li>
+<li><p><strong>solution</strong> (<em>Path</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="ctfcli.ClassConstructor.Challengeyaml.create">
+<span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">connection_info</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attempts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_attempts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dynamic</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decay</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minimum</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">author</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flags</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topics</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tags</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">files</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">requirements</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctfcli.ClassConstructor.Challengeyaml.create" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference external" href="mailto:host&#37;&#52;&#48;server$">host<span>&#64;</span>server$</a>&gt; python ./ctfcli/ ctfcli ctfdops repo &lt;category name&gt; challenge create
+Creates a Manually crafted Challenge from supplied arguments
+on the command line</p>
+<p>Not Implemented yet</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ctfcli.ClassConstructor.Challengeyaml.processchallenge">
+<span class="sig-name descname"><span class="pre">processchallenge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">apihandler</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">utils.apisession.APIHandler</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jsonpayload</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctfcli.ClassConstructor.Challengeyaml.processchallenge" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ctfcli.ClassConstructor.Challengeyaml.sync">
+<span class="sig-name descname"><span class="pre">sync</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ctfcli.ClassConstructor.Challengeyaml.sync" title="Permalink to this definition">¶</a></dt>
+<dd><p>These are the Actions that a Challenge folder can undergo, namely:</p>
+<dl class="simple">
+<dt>Add:</dt><dd><p>Adds a challenge to CTFd server</p>
+</dd>
+<dt>Remove:</dt><dd><p>Removes a challenge from CTFd server</p>
+</dd>
+<dt>Delete:</dt><dd><p>Deletes a challenge from the local Repository</p>
+</dd>
+<dt>Write:</dt><dd><p>Writes a challenge to the local Repository</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ctfcli.ClassConstructor.ClassA">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ctfcli.ClassConstructor.</span></span><span class="sig-name descname"><span class="pre">ClassA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctfcli.ClassConstructor.ClassA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ctfcli.ClassConstructor.ClassB">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ctfcli.ClassConstructor.</span></span><span class="sig-name descname"><span class="pre">ClassB</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">codeobject</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctfcli.ClassConstructor.ClassB" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>An example of how to dynamically create classes based on params</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>codeobject</strong> (<em>object</em>) – An arbitrary function or bit of code as a single object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ctfcli.ClassConstructor.Hando">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ctfcli.ClassConstructor.</span></span><span class="sig-name descname"><span class="pre">Hando</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctfcli.ClassConstructor.Hando" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>LOL how do you like THIS name?!?
+muahaha</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ctfcli.ClassConstructor.Handout">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ctfcli.ClassConstructor.</span></span><span class="sig-name descname"><span class="pre">Handout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctfcli.ClassConstructor.Handout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ctfcli.ClassConstructor.Hando" title="ctfcli.ClassConstructor.Hando"><code class="xref py py-class docutils literal notranslate"><span class="pre">ctfcli.ClassConstructor.Hando</span></code></a></p>
+<p>Represents a Handout folder for files and data to be given to the
+CTF player</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ctfcli.ClassConstructor.KubernetesYaml">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ctfcli.ClassConstructor.</span></span><span class="sig-name descname"><span class="pre">KubernetesYaml</span></span><a class="headerlink" href="#ctfcli.ClassConstructor.KubernetesYaml" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ctfcli.ClassConstructor.Yaml" title="ctfcli.ClassConstructor.Yaml"><code class="xref py py-class docutils literal notranslate"><span class="pre">ctfcli.ClassConstructor.Yaml</span></code></a></p>
+<p>Represents a Kubernetes specification
+future</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ctfcli.ClassConstructor.MasterFile">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ctfcli.ClassConstructor.</span></span><span class="sig-name descname"><span class="pre">MasterFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctfcli.ClassConstructor.MasterFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ctfcli.ClassConstructor.Yaml" title="ctfcli.ClassConstructor.Yaml"><code class="xref py py-class docutils literal notranslate"><span class="pre">ctfcli.ClassConstructor.Yaml</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ctfcli.ClassConstructor.Masterlist">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ctfcli.ClassConstructor.</span></span><span class="sig-name descname"><span class="pre">Masterlist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctfcli.ClassConstructor.Masterlist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ctfcli.ClassConstructor.MasterFile" title="ctfcli.ClassConstructor.MasterFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">ctfcli.ClassConstructor.MasterFile</span></code></a></p>
+<p>This is one way of turning a yaml into a class</p>
+<p><a class="reference external" href="https://matthewpburruss.com/post/yaml/">https://matthewpburruss.com/post/yaml/</a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ctfcli.ClassConstructor.Masterlist.writemasteryaml">
+<span class="sig-name descname"><span class="pre">writemasteryaml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filemode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'a'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctfcli.ClassConstructor.Masterlist.writemasteryaml" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes to an existing master yaml file</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ctfcli.ClassConstructor.Proto2">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ctfcli.ClassConstructor.</span></span><span class="sig-name descname"><span class="pre">Proto2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">entries</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctfcli.ClassConstructor.Proto2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The Class Accepts a dict of {Classname:Class(params)}
+The Class calls ClassB(ClassA, Message) -&gt; ClassA(message)</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ctfcli.ClassConstructor.Repo">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ctfcli.ClassConstructor.</span></span><span class="sig-name descname"><span class="pre">Repo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctfcli.ClassConstructor.Repo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ctfcli.ClassConstructor.Repository">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ctfcli.ClassConstructor.</span></span><span class="sig-name descname"><span class="pre">Repository</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctfcli.ClassConstructor.Repository" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ctfcli.ClassConstructor.Repo" title="ctfcli.ClassConstructor.Repo"><code class="xref py py-class docutils literal notranslate"><span class="pre">ctfcli.ClassConstructor.Repo</span></code></a></p>
+<p>Representation of a repository as exists in the challenges folder</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ctfcli</span> <span class="n">ctfdops</span> <span class="n">repo</span> <span class="n">reversing</span> <span class="n">Challenge_SHA256HASHSTRING</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;Category: Reversing, Challenge Name: &quot;ROPSrFUN4A11&quot;&#39;</span>
+</pre></div>
+</div>
+<dl>
+<dt>Repository -&gt; Reversing -&gt; Challenge_SHA256HASHSTRING</dt><dd><blockquote>
+<div><p>-&gt; Challenge_SHA256HASHSTRING
+-&gt; Challenge_SHA256HASHSTRING
+-&gt; Challenge_SHA256HASHSTRING</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-&gt; Forensics</dt><dd><p>-&gt; Challenge_SHA256HASHSTRING
+-&gt; Challenge_SHA256HASHSTRING
+-&gt; Challenge_SHA256HASHSTRING</p>
+</dd>
+<dt>-&gt; Web</dt><dd><p>-&gt; Challenge_SHA256HASHSTRING
+-&gt; Challenge_SHA256HASHSTRING</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>**kwargs</strong> (<em>dict</em>) – Feed it a dict of Category()’s with Challenge()’s appended</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ctfcli.ClassConstructor.Solution">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ctfcli.ClassConstructor.</span></span><span class="sig-name descname"><span class="pre">Solution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctfcli.ClassConstructor.Solution" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ctfcli.ClassConstructor.Soluto" title="ctfcli.ClassConstructor.Soluto"><code class="xref py py-class docutils literal notranslate"><span class="pre">ctfcli.ClassConstructor.Soluto</span></code></a></p>
+<p>Represents a Solution folder for data describing the methods and
+steps necessary to solve the challenge and capture the flag</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ctfcli.ClassConstructor.Soluto">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ctfcli.ClassConstructor.</span></span><span class="sig-name descname"><span class="pre">Soluto</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctfcli.ClassConstructor.Soluto" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>OR THIS!?!? muhahahaAHAHAHA</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ctfcli.ClassConstructor.Yaml">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ctfcli.ClassConstructor.</span></span><span class="sig-name descname"><span class="pre">Yaml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filepath</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctfcli.ClassConstructor.Yaml" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Represents a challange.yml
+Give Path to challenge.yml</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>filepath</strong> (<em>str</em>) – Full Filepath to Yaml File to load</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="ctfcli.ClassConstructor.Yaml.loadyaml">
+<span class="sig-name descname"><span class="pre">loadyaml</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ctfcli.ClassConstructor.Yaml.loadyaml" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads the yaml specified by the class variable Yaml.filepath</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ctfcli.ClassConstructor.Yaml.writeyaml">
+<span class="sig-name descname"><span class="pre">writeyaml</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ctfcli.ClassConstructor.Yaml.writeyaml" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remember to assign data to the file with</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thing</span> <span class="o">=</span> <span class="n">Yaml</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">thing</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;key&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ctfcli.linkage">
+<span id="ctfcli-linkage-module"></span><h2>ctfcli.linkage module<a class="headerlink" href="#module-ctfcli.linkage" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="ctfcli.linkage.SandBoxyCTFdLinkage">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ctfcli.linkage.</span></span><span class="sig-name descname"><span class="pre">SandBoxyCTFdLinkage</span></span><a class="headerlink" href="#ctfcli.linkage.SandBoxyCTFdLinkage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Maps to the command</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; host@server$&gt; python ./ctfcli/ ctfcli
+</pre></div>
+</div>
+<p>Used to upload challenges from the data directory in project root</p>
+<p>And manage the ctfd instance</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ctfcli.linkage.SandBoxyCTFdLinkage.getchallengesbycategory">
+<span class="sig-name descname"><span class="pre">getchallengesbycategory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">printscr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctfcli.linkage.SandBoxyCTFdLinkage.getchallengesbycategory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists challenges in repo by category
+Supply “print=False” to return a variable instead of utf-8</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ctfcli.linkage.SandBoxyCTFdLinkage.init">
+<span class="sig-name descname"><span class="pre">init</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctfdtoken</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctfdurl</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctfcli.linkage.SandBoxyCTFdLinkage.init" title="Permalink to this definition">¶</a></dt>
+<dd><p>Link to CTFd instance with token and URI</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; host@server$&gt; python ./ctfcli/ ctfcli init
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Creates a masterlist of challenges in the repository</p></li>
+<li><p>Creates a git repository and adds all the files</p></li>
+<li><p>links repository with CTFd instance via disposable token</p></li>
+</ul>
+<p>TODO: Add Oauth via discord</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ctfcli.linkage.SandBoxyCTFdLinkage.listcategories">
+<span class="sig-name descname"><span class="pre">listcategories</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prints</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctfcli.linkage.SandBoxyCTFdLinkage.listcategories" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the names of all Categories
+Supply “print=False” to return a variable instead of display to screen</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ctfcli.linkage.SandBoxyCTFdLinkage.listsyncedchallenges">
+<span class="sig-name descname"><span class="pre">listsyncedchallenges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">remote</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctfcli.linkage.SandBoxyCTFdLinkage.listsyncedchallenges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the challenges installed to the server
+Use
+&gt;&gt;&gt; –remote=False
+to check the LOCAL repository</p>
+<p>For git operations, use <cite>gitops</cite> or your preferred terminal workflow</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>remote</strong> (<em>bool</em>) – If True, Checks CTFd server for installed challenges</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ctfcli.linkage.SandBoxyCTFdLinkage.newfromtemplate">
+<span class="sig-name descname"><span class="pre">newfromtemplate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctfcli.linkage.SandBoxyCTFdLinkage.newfromtemplate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new CTFd Challenge from template</p>
+<p>If no repo is present, uploads the DEFAULT template to CTFd</p>
+<p>NOT IMPLEMENTED YET</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ctfcli.linkage.SandBoxyCTFdLinkage.synccategory">
+<span class="sig-name descname"><span class="pre">synccategory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctfdurl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctfdtoken</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctfcli.linkage.SandBoxyCTFdLinkage.synccategory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maps to the command
+&gt;&gt;&gt; <a class="reference external" href="mailto:host&#37;&#52;&#48;server$">host<span>&#64;</span>server$</a>&gt; ctfcli synccategory &lt;categoryname&gt;
+Synchronize all challenges in the given category,
+this uploads the challenge data to CTFd</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>category</strong> (<em>str</em>) – The name of the category to syncronize with the CTFd server</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ctfcli.linkage.SandBoxyCTFdLinkage.syncchallenge">
+<span class="sig-name descname"><span class="pre">syncchallenge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">challenge</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctfdurl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctfdtoken</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctfcli.linkage.SandBoxyCTFdLinkage.syncchallenge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Syncs a challenge with the CTFd server</p>
+<p>Usage:
+&gt;&gt;&gt; <a class="reference external" href="mailto:host&#37;&#52;&#48;server$">host<span>&#64;</span>server$</a>&gt; ctfcli syncchallenge &lt;challenge_id&gt; –ctfdtoken &lt;token&gt; –ctfdurl &lt;url&gt;</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>challenge</strong> (<em>Challenge</em>) – Challenge to syncronize with the CTFd server</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ctfcli.linkage.SandBoxyCTFdLinkage.syncrepository">
+<span class="sig-name descname"><span class="pre">syncrepository</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctfdurl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctfdtoken</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctfcli.linkage.SandBoxyCTFdLinkage.syncrepository" title="Permalink to this definition">¶</a></dt>
+<dd><p>Syncs the entire Repository Folder</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ctfdurl</strong> (<em>str</em>) – The URL of the CTFd Server instance</p></li>
+<li><p><strong>ctfdtoken</strong> (<em>str</em>) – Token given from Admin Panel &gt; Config &gt; Settings &gt; Auth Token Form</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 <div class="section" id="ctfcli-setup-module">
 <h2>ctfcli.setup module<a class="headerlink" href="#ctfcli-setup-module" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-ctfcli">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ctfcli" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -89,23 +437,17 @@
 
 <h3>Navigation</h3>
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">ctfcli</a></li>
-</ul>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="modules.html">ctfcli</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">ctfcli package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="ctfcli.utils.html">ctfcli.utils package</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#subpackages">Subpackages</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#ctfcli-linkage-module">ctfcli.linkage module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ctfcli.ClassConstructor">ctfcli.ClassConstructor module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ctfcli.linkage">ctfcli.linkage module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#ctfcli-setup-module">ctfcli.setup module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-contents">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ctfcli">Module contents</a></li>
 </ul>
 </li>
-</ul>
-<ul>
 <li class="toctree-l1"><a class="reference internal" href="ctfcli.utils.html">ctfcli.utils package</a></li>
 </ul>
 
